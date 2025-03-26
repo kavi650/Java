@@ -1,0 +1,30 @@
+import java.util.*;
+
+class area
+
+{
+
+     public void square()
+
+	{    int a=10;
+
+	      System.out.println("Area of square:"+(a*a));
+
+	}
+
+}
+
+class Main
+
+{
+
+ public static void main(String[] args)	
+
+	{  
+
+		area a= new area();
+
+		a.square();
+
+}
+}
