@@ -1,0 +1,49 @@
+interface Student{  
+
+             public void draw();  
+
+}  
+
+//Implementation: by second user  
+
+class details implements Student{  
+
+                   public void draw()
+
+                          {       int id=101;
+
+                                  System.out.println(“id:”+id);    }  
+
+}  
+
+class grade implements Student{  
+
+                  public void draw()
+
+                         {     float m1=98, m2=99;
+
+                                float avg=(m1+m2)/2;
+
+                                System.out.println(“average:”+avg);
+
+}  
+
+//Using interface: by third user  
+
+class Main{ 
+
+                   public static void main(String args[]){  
+
+                            Student d=new details();//In real scenario, object is provided by method e.g. g
+
+                            d.draw();
+
+                            Student n= new grade();
+
+                            n.draw();  
+
+}
+
+} 
+
+
