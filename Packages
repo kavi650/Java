@@ -1,0 +1,71 @@
+pgm 1
+package example;  
+
+public class Calculator {  
+
+    public int add(int a, int b) {  
+
+        return a + b;  
+
+    }  
+
+    public int subtract(int a, int b) {  
+
+        return a - b;  
+
+    }  
+
+    public int multiply(int a, int b) {  
+
+        return a * b;  
+
+    }  
+
+    public int divide(int a, int b) {  
+
+        return a/b;
+
+    }  
+
+}
+
+
+
+
+
+
+
+
+
+pgm2
+import example.Calculator;
+
+class mark
+
+{
+
+      public static void main(String[] args)
+
+          {
+
+                 Calculator c= new Calculator;
+
+                 int b= c.add(10,2);
+
+                 int n= c.subtract(20,2);
+
+                 int m= c.multiply(10,2);
+
+                 int j=c.divide(20,2);
+
+                 System.out.println(b);      
+
+                 System.out.println(n);      
+
+                 System.out.println(m);      
+
+                 System.out.println(j);      
+
+}
+
+}
