@@ -1,0 +1,23 @@
+APPLET
+
+
+import java.applet.*;
+import java.awt.*;
+public class myapp extends Applet
+{
+Public void paint(Graphics g)
+{
+g.drawstring("my applet design"30,60);
+}
+}
+
+
+<html>
+<head>
+<title>My Applet Design</title>
+</head>
+<body>
+<applet code="myapp.class"height="300",width="200">
+</applet>
+</body>
+</html>
