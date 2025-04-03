@@ -69,3 +69,14 @@ class mark
 }
 
 }
+Javac -d . Filename.java
+
+
+
+Import calculator.maths;
+Class abc
+{
+Public static void main (string []args)
+{
+Maths m=new maths();
+S.o.p.("add"+(m.add(1,2)));
