@@ -1,49 +1,38 @@
-interface Student{  
+INTERFACE 
 
-             public void draw();  
 
-}  
 
-//Implementation: by second user  
+import java.util.*;
 
-class details implements Student{  
-
-                   public void draw()
-
-                          {       int id=101;
-
-                                  System.out.println(“id:”+id);    }  
-
-}  
-
-class grade implements Student{  
-
-                  public void draw()
-
-                         {     float m1=98, m2=99;
-
-                                float avg=(m1+m2)/2;
-
-                                System.out.println(“average:”+avg);
-
-}  
-
-//Using interface: by third user  
-
-class Main{ 
-
-                   public static void main(String args[]){  
-
-                            Student d=new details();//In real scenario, object is provided by method e.g. g
-
-                            d.draw();
-
-                            Student n= new grade();
-
-                            n.draw();  
-
+// Interface with an abstract method
+interface Shape {
+    void draw();
 }
 
-} 
+// Rectangle class implementing Shape
+class Rectangle implements Shape {
+    public void draw() {
+        int l = 10, b = 20;
+        System.out.println("Area of Rectangle: " + (l * b)); // Proper formatting
+    }
+}
 
+// Square class implementing Shape
+class Square implements Shape {
+    public void draw() {
+        int a = 10;
+        System.out.println("Area of Square: " + (a * a)); // Proper formatting
+    }
+}
 
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Using polymorphism
+        Shape rect = new Rectangle();
+        rect.draw();  // Calls Rectangle's draw()
+
+        Shape sq = new Square();
+        sq.draw();  // Calls Square's draw()
+    }
+}
