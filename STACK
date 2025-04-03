@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+class Stack {
+    private int[] arr;
+    private int top;
+    private int capacity;
+
+    public Stack(int size) {
+        arr = new int[size];
+        capacity = size;
+        top = -1;
+    }
+
+    public void push(int item) {
+        if (isFull()) {
+            System.out.println("Stack Overflow!");
+            return;
+        }
+        arr[++top] = item;
+        System.out.println("Pushed " + item);
+    }
+
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack Underflow!");
+            return -1;
+        }
+        return arr[top--];
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    public boolean isFull() {
+        return top == capacity - 1;
+    }
+
+    public void display() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return;
+        }
+        System.out.println("Stack elements:");
+        for (int i = top; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+public class StackImplementation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter stack size: ");
+        int size = scanner.nextInt();
+        Stack stack = new Stack(size);
+
+        while (true) {
+            System.out.println("\nChoose an operation:");
+            System.out.println("1. Push");
+            System.out.println("2. Pop");
+            System.out.println("3. Display");
+            System.out.println("4. Exit");
+            System.out.print("Enter choice: ");
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter value to push: ");
+                    int value = scanner.nextInt();
+                    stack.push(value);
+                    break;
+                case 2:
+                    int popped = stack.pop();
+                    if (popped != -1) {
+                        System.out.println("Popped: " + popped);
+                    }
+                    break;
+                case 3:
+                    stack.display();
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice!");
+            }
+        }
+    }
+}
