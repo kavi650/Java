@@ -1,0 +1,25 @@
+EXCEPTION HANDLING 
+
+
+
+import java.util.*;
+class abc
+{
+public static void main (String args [])
+{
+int a=10;
+int b=0;
+int c=0;
+int x,y;
+try{
+ x=a/b-c;
+y=a/b+c;
+System.out.println(x);
+System.out.println(y);
+}
+catch(ArithmeticException e)
+{
+System.out.println(division by 0);
+}
+}
+}
